@@ -6,7 +6,7 @@
 
 import sys
 
-# destructure param
+	# destructure param
 # operator, first operand, second operand = param
 
 
@@ -26,6 +26,10 @@ def parser(params=[]):
         if not params[0] in operators:
             raise ValueError(f"Unknown operator, choose from {operators}")
 
+        # TODO: there seem to be a misplaced logic here, look into it
+        # we are checking if the operands are numbers
+        # what we desire is that the operands should be castable to number
+        
         if (type(params[1]) in operand_types and
                 type(params[2]) in operand_types):
             raise ValueError(f"A number is required as operand")
